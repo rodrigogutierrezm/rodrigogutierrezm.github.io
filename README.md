@@ -1,4 +1,7 @@
-# Feel free to visit my webpage
+# 🌟 Feel free to visit my webpage 🌟
 
-[Website](https://rodrigogutierrezm.github.io)
+Explore more about my work, projects, and research on my personal website!
 
+[🔗 Visit my Website](https://rodrigogutierrezm.github.io)
+
+🚀 Let's connect and collaborate!
