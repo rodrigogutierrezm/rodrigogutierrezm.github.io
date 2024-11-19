@@ -1,72 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning"
-    />
-    <meta name="keywords" content="A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodrigo Gutiérrez Moreno</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-E1Z15EF2FG"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bulma Framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
       }
-      gtag('js', new Date())
-
-      gtag('config', 'G-E1Z15EF2FG')
-    </script>
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="./static/css/bulma.min.css" />
-    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
-    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
-    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
-    <link rel="stylesheet" href="./static/css/index.css" />
-    <link rel="icon" href="./static/images/favicon.png" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="./static/js/fontawesome.all.min.js"></script>
-    <script src="./static/js/bulma-carousel.min.js"></script>
-    <script src="./static/js/bulma-slider.min.js"></script>
-    <script src="./static/js/index.js"></script>
+      .hero-body {
+        padding: 2rem 1.5rem;
+      }
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ddd;
+      }
+      .profile-heading {
+        margin-top: 15px;
+      }
+      .links button {
+        margin-right: 5px;
+      }
+      .publication {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+      }
+      .publication img {
+        max-width: 100px;
+        margin-right: 15px;
+      }
+      .publication-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+      .publication-info {
+        margin-top: 0.2rem;
+        color: #555;
+      }
+      .publication-links a {
+        font-size: 0.9rem;
+        margin-right: 10px;
+        color: #3273dc;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-        <img src="./static/media/rodrigogutierrez.png" alt="Tu Foto" class="profile-photo">
-        <h1>Rodrigo Gutiérrez Moreno</h1>
-        <h2>Postdoctoral Researcher at RobeSafe Research Group</h2>
-        <p>Rodrigo Gutiérrez Moreno received his BSc degree (2012-2017) in Industrial Electronics and Automation Engineering, from the University of Alcalá and his MSc (2017-2019) in Automation and Robotics, from the Universidad Politécnica de Madrid. He received his Ph.D. degree in Electrical Engineering in 2024 from the University of Alcalá, Alcalá de Henares, Spain. He is a member of the RobeSafe research group. His research interests include robotics and control, autonomous driving techniques, decision-making algorithms, artificial intelligence, and sim2real methodologies. He has authored more than 20 publications in international journals and conference proceedings.</p>
-        
-        <div class="articles">
-            <h2>Artículos Recientes</h2>
-            
-            <div class="article">
-                <h3>A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning.</h3>
-                <p>Decision-Making is a fundamental topic in the domain of Autonomous Driving where significant challenges must be tackled due to the variable behaviours... <a href="#article1"></a></p>
-            </div>
-            
-            <div class="article">
-              <h3>A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning.</h3>
-              <p>Decision-Making is a fundamental topic in the domain of Autonomous Driving where significant challenges must be tackled due to the variable behaviours... <a href="#article2"></a></p>
-            </div>
+    <section class="hero is-light">
+      <div class="hero-body has-text-centered">
+        <img
+          src="./static/media/rodrigogutierrez.png"
+          alt="Rodrigo's Photo"
+          class="profile-photo"
+        />
+        <h1 class="title profile-heading">Rodrigo Gutiérrez Moreno</h1>
+        <h2 class="subtitle">Postdoctoral Researcher at RobeSafe</h2>
+        <p>
+          Building state-of-the-art decision-making algorithms for autonomous
+          systems. Experienced in Robotics, AI, and Sim2Real methodologies.
+        </p>
+        <div class="links">
+          <button class="button is-light is-small">CV</button>
+          <button class="button is-light is-small">Scholar</button>
+          <button class="button is-light is-small">GitHub</button>
+          <button class="button is-light is-small">Twitter</button>
         </div>
-    </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="title is-4">Publications</h2>
+        <div class="publication">
+          <img src="./static/media/piramidmiguel.pdf" alt="Article 1" />
+          <div>
+            <div class="publication-title">
+            </p><a href="#article1"></a>A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning</p>
+            </div>
+            <div class="publication-info">
+              Published in *Journal Name*, 2024 | Co-Authors: [Author1,
+              Author2, Rodrigo Gutiérrez Moreno]
+            </div>
+            <div class="publication-links">
+              <a href="./static/articles/article1.pdf" target="_blank">PDF</a>
+              <a href="#project1">Project Page</a>
+            </div>
+          </div>
+        </div>
+        <div class="publication">
+          <img src="./static/media/Hybrid.drawio.pdf" alt="Article 2" />
+          <div>
+            <div class="publication-title">
+            </p><a href="#article2"></a>Enhancing Autonomous Driving in Urban Scenarios: A Hybrid Approach with Reinforcement Learning and Classical Control</p>
+            </div>
+            <div class="publication-info">
+              Published in *Conference Name*, 2024 | Co-Authors: [Author1,
+              Rodrigo Gutiérrez Moreno]
+            </div>
+            <div class="publication-links">
+              <a href="./static/articles/article2.pdf" target="_blank">PDF</a>
+              <a href="#project2">Project Page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
