@@ -1,4 +1,4 @@
-# 🌟 Feel free to visit my webpage 🌟
+# Feel free to visit my webpage
 
 Explore more about my work, projects, and research on my personal website!
 
