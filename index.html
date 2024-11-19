@@ -1,24 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artículos</title>
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="icon" href="./static/images/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo Gutiérrez Moreno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid white;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        h1, h2 {
+            margin: 10px 0;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 0 0 20px;
+        }
+        .articles {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .articles h2 {
+            margin-bottom: 10px;
+        }
+        .article {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .article a {
+            color: #add8e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .article a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-  <section class="section">
     <div class="container">
-      <h1 class="title has-text-centered">Artículos</h1>
-      <div class="content">
-        <ul>
-          <li><a href="./article1.html">Artículo 1: A Curriculum Approach</a></li>
-          <li><a href="./article2.html">Artículo 2: DiffSegmenter</a></li>
-          <!-- Agrega más enlaces a otros artículos -->
-        </ul>
-      </div>
+        <img src="./static/media/rodrigogutierrez.png" alt="Tu Foto" class="profile-photo">
+        <h1>Rodrigo Gutiérrez Moreno</h1>
+        <h2>Postdoctoral Researcher at RobeSafe Research Group</h2>
+        <p>Rodrigo Gutiérrez Moreno received his BSc degree (2012-2017) in Industrial Electronics and Automation Engineering, from the University of Alcalá and his MSc (2017-2019) in Automation and Robotics, from the Universidad Politécnica de Madrid. He received his Ph.D. degree in Electrical Engineering in 2024 from the University of Alcalá, Alcalá de Henares, Spain. He is a member of the RobeSafe research group. His research interests include robotics and control, autonomous driving techniques, decision-making algorithms, artificial intelligence, and sim2real methodologies. He has authored more than 20 publications in international journals and conference proceedings.</p>
+        
+        <div class="articles">
+            <h2>Artículos Recientes</h2>
+            
+            <div class="article">
+                <h3>A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning.</h3>
+                <p>Decision-Making is a fundamental topic in the domain of Autonomous Driving where significant challenges must be tackled due to the variable behaviours... <a href="#article1"></a></p>
+            </div>
+            
+            <div class="article">
+              <h3>A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning.</h3>
+              <p>Decision-Making is a fundamental topic in the domain of Autonomous Driving where significant challenges must be tackled due to the variable behaviours... <a href="#article2"></a></p>
+            </div>
+        </div>
     </div>
-  </section>
 </body>
 </html>
