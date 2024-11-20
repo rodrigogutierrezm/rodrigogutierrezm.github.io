@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="A Waypoint Tracking Controller for Autonomous Road Vehicles Using ROS Framework"
+    />
+    <meta name="keywords" content="A Waypoint Tracking Controller for Autonomous Road Vehicles Using ROS Framework" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A Waypoint Tracking Controller for Autonomous Road Vehicles Using ROS Framework</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E1Z15EF2FG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-E1Z15EF2FG')
+    </script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/index.css" />
+    <link rel="icon" href="./static/images/favicon.png" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center">
+          <a class="navbar-item" href="./index.html">
+            <span class="icon">
+              <i class="fas fa-home"></i>
+            </span>
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> More Research </a>
+            <div class="navbar-dropdown">
+              <a
+                class="navbar-item"
+                href="./TITS2024curriculum.html"
+              >
+                Curricular Reinforcement Learning
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                A Waypoint Tracking Controller for Autonomous Road Vehicles Using ROS Framework
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://www.uah.es/es/estudios/profesor/Rodrigo-Gutierrez-Moreno/">Rodrigo Gutiérrez-Moreno</a
+                  ><sup>1</sup>,</span
+                >
+                <span class="author-block">
+                  <a href="https://www.uah.es/es/estudios/profesor/Maria-Elena-Lopez-Guillen/">Elena López-Guillén</a
+                  ><sup>1</sup>,</span
+                >
+                <span class="author-block">
+                  <a href="https://www.uah.es/es/estudios/profesor/Luis-Miguel-Bergasa-Pascual/">Luis M. Bergasa</a
+                  ><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.uah.es/es/estudios/profesor/Rafael-Barea-Navarro/">Rafael Barea</a
+                  ><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Óscar Pérez</a
+                  ><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Carlos Gómez-Huélamo</a
+                  ><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://portalcientifico.uah.es/investigadores/155277/detalle">Felipe Arango</a
+                  ><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Javier del Egido</a
+                  ><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Joaquín López-Fernández</a
+                  ><sup>2</sup>,
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"
+                  ><sup>1</sup>Universidad de Alcalá,</span>
+                <span class="author-block"
+                  ><sup>1</sup>Universidad de Vigo,</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- PDF Link. -->
+                  <span class="link-block">
+                    <a
+                      href="./static/articles/sensors2020controller.pdf"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a
+                      href="https://www.mdpi.com/1424-8220/20/14/4062"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  <!-- Code Link. -->
+                  <span class="link-block">
+                    <a
+                      href="https://github.com/rodrigogutierrezm/rodrigogutierrezm.github.io"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img
+          src="./static/media/sensors2024hybrid/sensors2020controller.png"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Automated Driving Systems (ADSs) require robust and scalable control systems in order to
+                achieve a safe, efficient and comfortable driving experience. Most global planners for autonomous
+                vehicles provide as output a sequence of waypoints to be followed. This paper proposes a modular
+                and scalable waypoint tracking controller for Robot Operating System (ROS)-based autonomous
+                guided vehicles. The proposed controller performs a smooth interpolation of the waypoints and
+                uses optimal control techniques to ensure robust trajectory tracking even at high speeds in urban
+                environments (up to 50 km/h). The delays in the localization system and actuators are compensated
+                in the control loop to stabilize the system. Forward velocity is adapted to path characteristics using a
+                velocity profiler. The controller has been implemented as an ROS package providing scalability and
+                exportability to the system in order to be used with a wide variety of simulators and real vehicles.
+                We show the results of this controller using the novel and hyper realistic CARLA Simulator and
+                carrying out a comparison with other standard and state-of-art trajectory tracking controllers.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{gutierrez2020controller,
+  author    = {Gutiérrez-Moreno, Rodrigo and López-Guillén, Elena and Bergasa, Luis Miguel and Barea, Rafael and Pérez, Óscar and Gómez-Huelamo, Carlos and Arango, Felipe and del Egido, Javier and López-Fernández, Joaquín},
+  title     = {A Waypoint Tracking Controller for Autonomous Road Vehicles Using ROS Framework},
+  journal   = {Sensors},
+  year      = {2020},
+}</code></pre>
+      </div>
+    </section>
+  </body>
+</html>
