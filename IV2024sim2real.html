@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta
       name="description"
-      content="Validation Method of a Self-Driving Architecture for Unexpected Pedestrian Scenario in CARLA Simulator"
+      content="Decision Making for Autonomous Driving Stack: Shortening the Gap from Simulation to Real-World Implementations"
     />
-    <meta name="keywords" content="Validation Method of a Self-Driving Architecture for Unexpected Pedestrian Scenario in CARLA Simulator" />
+    <meta name="keywords" content="Decision Making for Autonomous Driving Stack: Shortening the Gap from Simulation to Real-World Implementations" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Validation Method of a Self-Driving Architecture for Unexpected Pedestrian Scenario in CARLA Simulator</title>
+    <title>Decision Making for Autonomous Driving Stack: Shortening the Gap from Simulation to Real-World Implementations</title>
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -78,6 +78,48 @@
               >
                 Curricular Reinforcement Learning
               </a>
+              <a
+                class="navbar-item"
+                href="./sensors2024hybrid.html"
+              >
+                Hybrid Decision Making
+              </a>
+              <a
+                class="navbar-item"
+                href="./IV2024sim2real.html"
+              >
+                Simulation to Real
+              </a>
+              <a
+                class="navbar-item"
+                href="./ITSC2023augmented.html"
+              >
+                Augmented Reinforcement Learning
+              </a>
+              <a
+                class="navbar-item"
+                href="./IV2023hybrid.html"
+              >
+                Urban Scenarios
+              </a>
+              <a
+                class="navbar-item"
+                href="./sensors2022reinforcement.html"
+              >
+                Intersections
+              </a>
+              <a
+                class="navbar-item"
+                href="./IV2021validation.html"
+              >
+                Validation
+              </a>
+              <a
+                class="navbar-item"
+                href="./sensors2020controller.html"
+              >
+                Tracking Controller
+              </a>
             </div>
           </div>
         </div>
@@ -90,7 +132,7 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">
-                Validation Method of a Self-Driving Architecture for Unexpected Pedestrian Scenario in CARLA Simulator
+                Decision Making for Autonomous Driving Stack: Shortening the Gap from Simulation to Real-World Implementations
               </h1>
               <div class="is-size-5 publication-authors">
                 <span class="author-block">
@@ -99,25 +141,29 @@
                 >
                 <span class="author-block">
                   <a href="https://www.uah.es/es/estudios/profesor/Rafael-Barea-Navarro/">Rafael Barea</a
-                  ><sup>2</sup>,</span
+                  ><sup>1</sup>,</span
                 >
                 <span class="author-block">
                   <a href="https://www.uah.es/es/estudios/profesor/Maria-Elena-Lopez-Guillen/">Elena López-Guillén</a
-                  ><sup>2</sup>,
+                  ><sup>1</sup>,
                 </span>
                 <span class="author-block">
                   <a href="https://portalcientifico.uah.es/investigadores/155277/detalle">Felipe Arango</a
-                  ><sup>2</sup>,
+                  ><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Pedro Revenga</a
+                  ><sup>1</sup>,
                 </span>
                 <span class="author-block">
                   <a href="https://www.uah.es/es/estudios/profesor/Luis-Miguel-Bergasa-Pascual/">Luis M. Bergasa</a
-                  ><sup>2</sup>,
+                  ><sup>1</sup>
                 </span>
               </div>
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block"
-                  ><sup>1</sup>Universidad de Alcalá,</span>
+                  ><sup>1</sup>Universidad de Alcalá</span>
               </div>
 
               <div class="column has-text-centered">
@@ -125,7 +171,7 @@
                   <!-- PDF Link. -->
                   <span class="link-block">
                     <a
-                      href="./static/articles/sensors2024hybrid.pdf"
+                      href="./static/articles/IV2024sim2real.pdf"
                       class="external-link button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -136,7 +182,7 @@
                   </span>
                   <span class="link-block">
                     <a
-                      href="https://www.preprints.org/manuscript/202410.1308/v1"
+                      href="https://ieeexplore.ieee.org/document/10588560"
                       class="external-link button is-normal is-rounded is-dark"
                     >
                       <span class="icon">
@@ -169,7 +215,7 @@
       <div class="container is-max-desktop">
         <div class="hero-body">
           <img
-          src="./static/media/sensors2024hybrid/sensors2024hybrid.png"
+          src="./static/media/IV2024sim2real/IV2024sim2real.png"
           />
         </div>
       </div>
@@ -183,7 +229,7 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                The use of Deep Learning algorithms in the domain of Decision-Making for Autonomous Vehicles has garnered significant attention in the literature in the last years, showcasing considerable potential. Nevertheless, most of the solutions proposed by the scientific community encounter difficulties in real-world applications. This paper aims to provide a realistic implementation of a hybrid Decision-Making module in an Autonomous Driving stack, integrating the learning capabilities from the experience of Deep Reinforcement Learning algorithms and the reliability of classical methodologies. This work encompasses the implementation of concatenated scenarios in simulated environments, and the integration of Autonomous Driving modules. Specifically, the authors address the Decision-Making problem by employing a POMDP formulation and offer a solution through the use of \acrlong{DRL} algorithms. Furthermore, an additional control module to execute the decisions in a safe and comfortable way through a hybrid architecture is presented. The proposed architecture is validated in the CARLA simulator by navigating through multiple concatenated scenarios, outperforming the CARLA Autopilot in terms of completion time, while ensuring both safety and comfort.
+                This paper introduces a novel methodology for implementing a practical Decision Making module within an Autonomous Driving Stack, focusing on merge scenarios in urban environments. Our approach leverages Deep Reinforcement Learning and Curriculum Learning, structured into three stages: initial training in a lightweight simulator (SUMO), refinement in a high-fidelity simulation (CARLA) through a Digital Twin, and final validation in real-world scenarios with Parallel Execution. We propose a Partially Observable Markov Decision Process framework and employ the Trust Region Policy Optimization algorithm to train our agent. Our method significantly narrows the gap between simulated training and real-world application, offering a cost-effective and flexible solution for Autonomous Driving development. The paper details the experimental setup and outcomes in each stage, demonstrating the effectiveness of the proposed methodology.
               </p>
             </div>
           </div>
@@ -193,10 +239,10 @@
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@article{gutierrez2024hybrid,
-  author    = {Gutiérrez-Moreno, Rodrigo and Barea, Rafael and López-Guillén, Elena and Arango, Felipe and Bergasa, Luis Miguel},
-  title     = {Validation Method of a Self-Driving Architecture for Unexpected Pedestrian Scenario in CARLA Simulator},
-  journal   = {Sensors},
+        <pre><code>@article{gutierrez2023sim2real,
+  author    = {Gutiérrez-Moreno, Rodrigo and Barea, Rafael and López-Guillén, Elena and Arango, Felipe and Revenga, Pedro and Bergasa, Luis Miguel},
+  title     = {Decision Making for Autonomous Driving Stack: Shortening the Gap from Simulation to Real-World Implementations},
+  journal   = {35th IEEE Intelligent Vehicles Symposium (IV)},
   year      = {2024},
 }</code></pre>
       </div>
