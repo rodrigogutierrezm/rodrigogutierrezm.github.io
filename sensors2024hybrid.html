@@ -232,6 +232,129 @@
         </div>
         <!--/ Abstract. -->
 
+        <!-- CARLA -->
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <h2 class="title is-3" style="margin-top: 70px;">Experiments in CARLA</h2>
+    
+    <p class="subtitle is-5">Realistic simulation including vehicle dynamics</p>
+       
+    <h3 class="title is-4" style="margin-top: 30px;">Town 03 Crossroad Scenario</h3>
+    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle must cross the intersection while vehicles are coming from both sides.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/carlacross.gif"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle stops due to the adversarial vehicles and starts moving when it identifies a gap. The control signals and comfor metrics are represented bellow.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/crossroadmid_control-1.png"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+    <h3 class="title is-4" style="margin-top: 30px;">Town 03 Merge Scenario</h3>
+    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle must merge into the right lane while vehicles are coming from left side.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/carlamerge.gif"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle stops due to the adversarial vehicles and starts moving when it identifies a gap. The control signals and comfor metrics are represented bellow.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/mergemid_control-1.png"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+    <h3 class="title is-4" style="margin-top: 30px;">Town 04 Lane Change Scenario</h3>
+    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle must drive until the end of the road while vehicles are driving in this road.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/carlalanechange.gif"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+    
+    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle changes lane two times resulting in the shown control signals.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/highway_control-1.png"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+    <h3 class="title is-4" style="margin-top: 30px;">Town 03 Roundabout Scenario</h3>
+    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle must merge into the roundabout and leave it in the second exit.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/carlaroundabout.gif"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+    <p class="subtitle is-5" style="margin-top: 10px;">The control signals are repreente of the vehicle approaching and mergin the roundabout.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/roundaboutmid_control-1.png"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+    <h3 class="title is-4" style="margin-top: 30px;">Town 03 Concatenated Scenario</h3>
+    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle drives through all the previously introduced scenarios in a concatenated way.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/concat.gif"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+    <p class="subtitle is-5" style="margin-top: 10px;">The fisrt charts shows the ego vehicle performance while the second one presentd the CARLA Autopilor signals under the same scenario.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/town03_control-1.png"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/town03ap_control-1.png"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+    <h3 class="title is-4" style="margin-top: 30px;">CARLA Quantitative Results</h3>
+    <p class="subtitle is-5" style="margin-top: 10px;">The comparison using different metrics betwenn our proposal and the CARLA Autopilot.</p>
+    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
+      <img
+        src="./static/media/T-IV2024curriculum/carlaresults.png"
+        class="image"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
+
+  </div>
+</div>
+
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
