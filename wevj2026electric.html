@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Reinforcement Learning-Based Autonomous Driving at Intersections in CARLA Simulator" />
-    <meta name="keywords" content="Autonomous Driving, Reinforcement Learning, CARLA, Intersections, Proximal Policy Optimization, Curriculum Learning" />
+    <meta name="description" content="Electric Vehicle Route Optimization: An End-to-End Learning Approach with Multi-Objective Planning" />
+    <meta name="keywords" content="Energy efficiency, Electric vehicles, Route planning, LSTM, Neural Networks, Multi-Objective Optimization" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RL-Based Autonomous Driving at Intersections | Rodrigo Gutiérrez-Moreno</title>
+    <title>Electric Vehicle Route Optimization | Rodrigo Gutiérrez-Moreno</title>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1Z15EF2FG"></script>
     <script>
@@ -45,6 +45,14 @@
         display: block;
         max-width: 100%;
         height: auto;
+      }
+      .experiment-block {
+        margin-bottom: 4rem;
+      }
+      .section-divider {
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-bottom: 30px !important;
       }
       .abstract-box {
         background-color: #fafafa;
@@ -98,7 +106,7 @@
             <div class="column has-text-centered">
               
               <h1 class="title is-2 publication-title mb-5">
-                Reinforcement Learning-Based Autonomous Driving at Intersections in CARLA Simulator
+                Electric Vehicle Route Optimization: An End-to-End Learning Approach with Multi-Objective Planning
               </h1>
               
               <div class="is-size-5 publication-authors mb-3">
@@ -106,21 +114,21 @@
                   <a href="https://www.uah.es/es/estudios/profesor/Rodrigo-Gutierrez-Moreno/">Rodrigo Gutiérrez-Moreno</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Rafael-Barea-Navarro/">Rafael Barea</a><sup>1</sup>,
+                  Ángel Llamazares<sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Maria-Elena-Lopez-Guillen/">Elena López-Guillén</a><sup>1</sup>,
+                  Pedro Revenga<sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  Javier Araluce<sup>1</sup>,
+                  Manuel Ocaña<sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Luis-Miguel-Bergasa-Pascual/">Luis M. Bergasa</a><sup>1</sup>
+                  Miguel Antunes-García<sup>1</sup>
                 </span>
               </div>
 
               <div class="is-size-6 publication-authors has-text-grey mb-5">
-                <span class="author-block"><sup>1</sup>Universidad de Alcalá</span>
+                <span class="author-block"><sup>1</sup>Electronics Department, Universidad de Alcalá, 28805 Alcalá de Henares, Spain</span>
               </div>
 
             </div>
@@ -132,7 +140,10 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body has-text-centered">
-          <img src="./static/media/sensors2022reinforcement/sensors2022reinforcement.png" class="experiment-img" alt="Intersections RL Framework Diagram" />
+          <img src="./static/media/WEVJ2026energy/contributions.png" class="experiment-img" alt="Overall Architecture of the Energy-Optimal Routing Framework" />
+          <h2 class="subtitle has-text-centered mt-4">
+            Overall architecture of the proposed energy-optimal routing framework.
+          </h2>
         </div>
       </div>
     </section>
@@ -144,9 +155,27 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="box abstract-box content has-text-justified">
               <p>
-                Intersections are considered one of the most complex scenarios in a self-driving framework due to the uncertainty in the behaviors of surrounding vehicles and the different types of scenarios that can be found. To deal with this problem, we provide a Deep Reinforcement Learning approach for intersection handling, which is combined with Curriculum Learning to improve the training process. The state space is defined by two vectors, containing adversaries and ego vehicle information. We define a features extractor module and an actor–critic approach combined with Curriculum Learning techniques, adding complexity to the environment by increasing the number of vehicles. In order to address a complete autonomous driving system, a hybrid architecture is proposed. The operative level generates the driving commands, the strategy level defines the trajectory and the tactical level executes the high-level decisions. This high-level decision system is the main goal of this research. To address realistic experiments, we set up three scenarios: intersections with traffic lights, intersections with traffic signs and uncontrolled intersections. The results of this paper show that a Proximal Policy Optimization algorithm can infer ego vehicle-desired behavior for different intersection scenarios based only on the behavior of adversarial vehicles.
+                Traditional routing algorithms optimizing for distance or travel time are inadequate for electric vehicles (EVs), which require energy-aware planning considering battery constraints and charging infrastructure. This work presents an energy-optimal routing system for EVs that integrates personalized consumption modeling with real-time environmental data. The system employs a Long Short-Term Memory (LSTM) neural network to predict State-of-Charge (SoC) consumption from real-world driving data, learning directly from spatiotemporal features including velocity, temperature, road inclination, and traveled distance. Unlike physics-based models requiring difficult-to-obtain parameters, this approach captures nonlinear dependencies and temporal patterns in energy consumption. The routing framework integrates static map data, dynamic traffic conditions, weather information, and charging station locations into a weighted graph representation. Edge costs reflect predicted SoC drops, while node penalties account for traffic congestion and charging opportunities. An enhanced A* algorithm finds optimal routes minimizing energy consumption. Experimental validation on a Nissan Leaf shows that the proposed end-to-end SoC estimator significantly outperforms traditional approaches. The model achieves an RMSE of 36.83 and an R<sup>2</sup> of 0.9374, corresponding to a 59.91% reduction in error compared to physics-based formulas. Real-world testing on various routes further confirms its accuracy, with a Mean Absolute Error in the total route SoC estimation of 2%, improving upon the 3.5% observed for commercial solutions.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 section-divider">State-of-Charge Estimator Evaluation</h2>
+            <p class="subtitle is-5 has-text-grey mb-6">Comparison between the end-to-end LSTM model and traditional physics-based formulas.</p>
+               
+            <div class="experiment-block">
+              <h3 class="title is-4">Predictive Performance Across Dataset Splits</h3>
+              <p class="subtitle is-6 mb-3">Comparison of predicted versus true SoC drops across Training, Validation, and Test datasets. The LSTM model demonstrates consistent generalization with tighter clustering around the ideal reference line compared to the physics baseline.</p>
+              <img src="./static/media/WEVJ2026energy/best_model_comparison_50_samples.png" class="experiment-img" alt="Comparison of Predicted vs True SoC Drops" />
+            </div>
+
           </div>
         </div>
       </div>
@@ -156,11 +185,14 @@
       <div class="container is-max-desktop content">
         <h2 class="title is-4">BibTeX</h2>
         <div class="box">
-          <pre style="background-color: transparent; padding: 0;"><code>@article{gutierrez2022reinforcement,
-  author    = {Gutiérrez-Moreno, Rodrigo and Barea, Rafael and López-Guillén, Elena and Araluce, Javier and Bergasa, Luis Miguel},
-  title     = {Reinforcement Learning-Based Autonomous Driving at Intersections in CARLA Simulator},
-  journal   = {Sensors},
-  year      = {2022},
+          <pre style="background-color: transparent; padding: 0;"><code>@article{gutierrez2026electric,
+  author    = {Gutiérrez-Moreno, Rodrigo and Llamazares, Ángel and Revenga, Pedro and Ocaña, Manuel and Antunes-García, Miguel},
+  title     = {Electric Vehicle Route Optimization: An End-to-End Learning Approach with Multi-Objective Planning},
+  journal   = {World Electric Vehicle Journal},
+  volume    = {17},
+  pages     = {41},
+  year      = {2026},
+  doi       = {10.3390/wevj17010041}
 }</code></pre>
         </div>
       </div>

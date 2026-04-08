@@ -1,225 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rodrigo Gutiérrez Moreno</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio and academic publications of Rodrigo Gutiérrez Moreno, Assistant Professor and Researcher." />
+  <title>Rodrigo Gutiérrez Moreno | Assistant Professor</title>
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Bulma Framework -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    <style>
-      body {
-        font-family: "Roboto", sans-serif;
-      }
-      .hero-body {
-        padding: 2rem 1.5rem;
-      }
-      .profile-photo {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid #ddd;
-      }
-      .profile-heading {
-        margin-top: 15px;
-      }
-      .links button {
-        margin-right: 5px;
-      }
-      .publication {
-        display: flex;
-        margin-bottom: 20px;
-        align-items: center;
-      }
-      .publication img {
-        max-width: 100px;
-        margin-right: 15px;
-      }
-      .publication-title {
-        font-size: 1.1rem;
-        font-weight: bold;
-      }
-      .publication-info {
-        margin-top: 0.2rem;
-        color: #555;
-      }
-      .publication-links a {
-        font-size: 0.9rem;
-        margin-right: 10px;
-        color: #3273dc;
-      }
-    </style>
-  </head>
-  <body>
-    <section class="hero is-light">
-      <div class="hero-body has-text-centered">
-        <img
-          src="./static/media/rodrigogutierrez.png"
-          alt="Rodrigo's Photo"
-          class="profile-photo"
-        />
-        <h1 class="title profile-heading">Rodrigo Gutiérrez Moreno</h1>
-        <h2 class="subtitle">Postdoctoral Researcher at RobeSafe</h2>
-          <div style="text-align: center; display: flex; justify-content: center; align-items: center;">
-            <p style="text-align: justify; max-width: 80%;">
-              I am Rodrigo Gutiérrez Moreno, and I received my BSc degree in Industrial Electronics and Automation Engineering from the University of Alcalá (2012-2017) and my MSc in Automation and Robotics from the Universidad Politécnica de Madrid (2017-2019). I earned my Ph.D. in Electrical Engineering in 2024 from the University of Alcalá, Alcalá de Henares, Spain. I am a member of the RobeSafe research group. My research interests include robotics and control, autonomous driving techniques, decision-making algorithms, artificial intelligence, and sim2real methodologies. I have authored more than 20 publications in international journals and conference proceedings.
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* VARIABLES DE TEMA CLARO (Por defecto) */
+    :root {
+      --bg-color: #fafafa;
+      --hero-bg: #ffffff;
+      --text-main: #4a4a4a;
+      --text-muted: #7a7a7a;
+      --title-color: #2c3e50;
+      --card-bg: #ffffff;
+      --border-color: #eaeaea;
+      --link-color: #3273dc;
+      --link-hover: #1d55b8;
+      --tag-bg: #eef3fc;
+      --tag-text: #1d55b8;
+    }
+
+    /* VARIABLES DE TEMA OSCURO */
+    body.dark-mode {
+      --bg-color: #121212;
+      --hero-bg: #1e1e1e;
+      --text-main: #d1d1d1;
+      --text-muted: #9e9e9e;
+      --title-color: #ffffff;
+      --card-bg: #1e1e1e;
+      --border-color: #333333;
+      --link-color: #6495ed;
+      --link-hover: #9bbcf4;
+      --tag-bg: #2a3b5c;
+      --tag-text: #9bbcf4;
+    }
+
+    body {
+      font-family: "Inter", sans-serif; 
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .hero {
+      background-color: var(--hero-bg);
+      border-bottom: 1px solid var(--border-color);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .title, .subtitle {
+      color: var(--title-color) !important;
+      transition: color 0.3s ease;
+    }
+
+    /* Botón flotante para Dark Mode */
+    .theme-toggle {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--title-color);
+      color: var(--hero-bg);
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      font-size: 1.2rem;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--border-color);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      margin-bottom: 1rem;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.03);
+    }
+
+    .bio-text {
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    .publication-card {
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border-color);
+      transition: box-shadow 0.2s ease, transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .publication-card:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      transform: translateY(-3px);
+    }
+
+    .publication-card img {
+      border-radius: 6px;
+      object-fit: cover;
+      width: 140px;
+      border: 1px solid var(--border-color);
+    }
+
+    .publication-title a {
+      color: var(--title-color);
+      font-weight: 600;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+
+    .publication-title a:hover {
+      color: var(--link-color);
+    }
+
+    .publication-info {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .custom-tag {
+      background-color: var(--tag-bg);
+      color: var(--tag-text);
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-right: 8px;
+      margin-bottom: 5px;
+    }
+
+    .doi-link {
+      color: var(--link-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    
+    .doi-link:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  
+  <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Dark Mode">
+    <i class="fas fa-moon" id="theme-icon"></i>
+  </button>
+
+  <section class="hero is-medium">
+    <div class="hero-body has-text-centered">
+      <div class="container">
+        <img src="./static/media/rodrigogutierrez.png" alt="Rodrigo Gutiérrez Moreno" class="profile-photo" />
+        
+        <h1 class="title is-2 mb-2 mt-3">Rodrigo Gutiérrez Moreno</h1>
+        <h2 class="subtitle is-4 mt-3">Assistant Professor at Universidad de Alcalá</h2>
+        
+        <div class="columns is-centered mt-5">
+          <div class="column is-8 has-text-justified bio-text">
+            <p>
+              I am an Assistant Professor at the University of Alcalá and a member of the RobeSafe research group. I received my BSc in Industrial Electronics and Automation Engineering (2017) and my Ph.D. in Electronics: Advanced Electronic Systems and Intelligent Systems (2024) from the University of Alcalá, as well as an MSc in Automation and Robotics from the Universidad Politécnica de Madrid (2019). My research focuses on autonomous driving techniques, decision-making algorithms, artificial intelligence, and bridging the gap between simulation and the real world (sim2real methodologies). I have authored over 20 publications in top-tier international journals and conference proceedings.
             </p>
           </div>
-        <div class="links">
-          <a href="https://www.uah.es/es/estudios/profesor/Rodrigo-Gutierrez-Moreno/" target="_blank">
-            <button class="button is-light is-small">CV</button>
-          </a>
-          <a href="https://scholar.google.es/citations?user=1sbw_JMAAAAJ&hl=es&oi=ao" target="_blank">
-            <button class="button is-light is-small">Scholar</button>
-          </a>
-          <a href="https://github.com/rodrigogutierrezm" target="_blank">
-            <button class="button is-light is-small">GitHub</button>
-          </a>
         </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <h2 class="title is-4">Publications</h2>
-        <div class="publication">
-          <img src="./static/media/SENSORS2026curriculum/SENSORS2026curriculum.png" alt="Article 1" />
-          <div>
-            <div class="publication-title">
-              <p>
-                <a href="./AI2025curriculum.html">A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning</a>
-              </p>
-            </div>
-            <div class="publication-info">
-              In submission in Sensors 2026 | Co-Authors: Rodrigo Gutiérrez-Moreno, Rafael Barea, Elena López-Guillén, Felipe Arango, Fabio Sánchez-García and Luis M. Bergasa
-            </div>
-            <div class="publication-links">
-              <a href="./static/articles/SENSORS2026curriculum.pdf" target="_blank">PDF</a>
-            </div>
-          </div>
-        </div>
-        <div class="publication">
-          <img src="./static/media/sensors2024hybrid/sensors2024hybrid.png" alt="Article 2" />
-          <div>
-            <div class="publication-title">
-              <p>
-                <a href="./sensors2024hybrid.html">Enhancing Autonomous Driving in Urban Scenarios: A Hybrid Approach with Reinforcement Learning and Classical Control</a>
-              </p>
-            </div>
-            <div class="publication-info">
-              Sensors 2024 | Co-Authors: Rodrigo Gutiérrez-Moreno, Rafael Barea, Elena López-Guillén, Felipe Arango and Luis M. Bergasa
-            </div>
-            <div class="publication-links">
-              <a href="./static/articles/sensors2024hybrid.pdf" target="_blank">PDF</a>
-            </div>
-          </div>
-        </div>
-        <div class="publication">
-          <img src="./static/media/IV2024sim2real/IV2024sim2real.png" alt="Article 3" />
-          <div>
-            <div class="publication-title">
-              <p>
-                <a href="./IV2024sim2real.html">Decision Making for Autonomous Driving Stack: Shortening the Gap from Simulation to Real-World Implementations</a>
-              </p>
-            </div>
-            <div class="publication-info">
-              35th IEEE Intelligent Vehicles Symposium 2024 | Co-Authors: Rodrigo Gutiérrez-Moreno, Rafael Barea, Elena López-Guillén, Felipe Arango, Pedro Revenga and Luis M. Bergasa
-            </div>
-            <div class="publication-links">
-              <a href="./static/articles/IV2024sim2real.pdf" target="_blank">PDF</a>
-            </div>
-          </div>
-        </div>
-        <div class="publication">
-          <img src="./static/media/ITSC2023augmented/ITSC2023augmented.png" alt="Article 4" />
-          <div>
-            <div class="publication-title">
-              <p>
-                <a href="./ITSC2023augmented.html">Augmented Reinforcement Learning with Efficient Social-Based Motion Prediction for Autonomous Decision-Making</a>
-              </p>
-            </div>
-            <div class="publication-info">
-              IEEE 26th International Conference on Intelligent Transportation Systems 2023 | Co-Authors: Rodrigo Gutiérrez-Moreno, Carlos Gómez-Huelamo, Rafael Barea, Elena López-Guillén, Felipe Arango and Luis M. Bergasa
-            </div>
-            <div class="publication-links">
-              <a href="./static/articles/ITSC2023augmented.pdf" target="_blank">PDF</a>
-            </div>
-          </div>
-        </div>
-        <div class="publication">
-          <img src="./static/media/IV2023hybrid/IV2023hybrid.png" alt="Article 5" />
-          <div>
-            <div class="publication-title">
-              <p>
-                <a href="./IV2023hybrid.html">Hybrid Decision Making for Autonomous Driving in Complex Urban Scenarios</a>
-              </p>
-            </div>
-            <div class="publication-info">
-              34th IEEE Intelligent Vehicles Symposium 2023 | Co-Authors: Rodrigo Gutiérrez-Moreno, Rafael Barea, Elena López-Guillén, Felipe Arango, Navil Abdeselam and Luis M. Bergasa
-            </div>
-            <div class="publication-links">
-              <a href="./static/articles/IV2023hybrid.pdf" target="_blank">PDF</a>
-            </div>
-          </div>
-        </div>
-        <div class="publication">
-          <img src="./static/media/sensors2022reinforcement/sensors2022reinforcement.png" alt="Article 6" />
-          <div>
-            <div class="publication-title">
-              <p>
-                <a href="./sensors2022reinforcement.html">Reinforcement Learning-Based Autonomous Driving at Intersections in CARLA Simulator</a>
-              </p>
-            </div>
-            <div class="publication-info">
-              Sensors 2022 | Co-Authors: Rodrigo Gutiérrez-Moreno, Rafael Barea, Elena López-Guillén, Javier Araluce and Luis M. Bergasa
-            </div>
-            <div class="publication-links">
-              <a href="./static/articles/sensors2022reinforcement.pdf" target="_blank">PDF</a>
-            </div>
-          </div>
-        </div>
-        <div class="publication">
-          <img src="./static/media/IV2021validation/IV2021validation.png" alt="Article 7" />
-          <div>
-            <div class="publication-title">
-              <p>
-                <a href="./IV2021validation.html">Validation Method of a Self-Driving Architecture for Unexpected Pedestrian Scenario in CARLA Simulator</a>
-              </p>
-            </div>
-            <div class="publication-info">
-              32nd IEEE Intelligent Vehicles Symposium 2021 | Co-Authors: Rodrigo Gutiérrez-Moreno, Felipe Arango, Carlos Gómez-Huelamo, Luis M. Bergasa, Rafael Barea and Javier Araluce
-            </div>
-            <div class="publication-links">
-              <a href="./static/articles/IV2021validation.pdf" target="_blank">PDF</a>
-            </div>
-          </div>
-        </div>
-        <div class="publication">
-          <img src="./static/media/sensors2020controller/sensors2020controller.png" alt="Article 8" />
-          <div>
-            <div class="publication-title">
-              <p>
-                <a href="./sensors2020controller.html">A Waypoint Tracking Controller for Autonomous Road Vehicles Using ROS Framework</a>
-              </p>
-            </div>
-            <div class="publication-info">
-              Sensors 2020 | Co-Authors: Rodrigo Gutiérrez-Moreno, Elena López-Guillén, Luis M. Bergasa, Rafael Barea, Óscar Pérez, Carlos Gómez-Huélamo, Felipe Arango, Javier del Egido and Joaquín López-Fernández
-            </div>
-            <div class="publication-links">
-              <a href="./static/articles/sensors2020controller.pdf" target="_blank">PDF</a>
-            </div>
-          </div>
+        <div class="buttons is-centered mt-5">
+          <a href="https://www.uah.es/es/estudios/profesor/Rodrigo-Gutierrez-Moreno/" target="_blank" class="button is-rounded">
+            <span class="icon"><i class="fas fa-university"></i></span>
+            <span>Institutional Profile</span>
+          </a>
+          <a href="https://scholar.google.es/citations?user=1sbw_JMAAAAJ&hl=es&oi=ao" target="_blank" class="button is-rounded">
+            <span class="icon" style="color: #4285F4;"><i class="fas fa-graduation-cap"></i></span>
+            <span>Google Scholar</span>
+          </a>
+          <a href="https://github.com/rodrigogutierrezm" target="_blank" class="button is-rounded">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>GitHub</span>
+          </a>
         </div>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3 mb-6 has-text-centered">Selected Publications</h2>
+      
+      <div class="columns is-centered">
+        <div class="column is-10">
+
+          <article class="media publication-card">
+            <figure class="media-left">
+              <p class="image">
+                <img src="./static/media/SENSORS2026curriculum/SENSORS2026curriculum.png" alt="Curriculum Approach Article" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h3 class="title is-5 mb-2 publication-title">
+                  <a href="./SENSORS2026curriculum.html">A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning</a>
+                </h3>
+                <div class="publication-info">
+                  <span class="tag is-info is-light mr-2">In submission</span>
+                  <span class="custom-tag">Sensors 2026</span><br>
+                  <strong>Authors:</strong> R. Gutiérrez-Moreno, R. Barea, E. López-Guillén, F. Arango, F. Sánchez-García, L. M. Bergasa<br>
+                </div>
+                </div>
+            </div>
+          </article>
+
+          <article class="media publication-card">
+            <figure class="media-left">
+              <p class="image">
+                <img src="./static/media/WEVJ2026energy/contributions.png" alt="Electric Vehicle Route Optimization" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h3 class="title is-5 mb-2 publication-title">
+                  <a href="./wevj2026electric.html">Electric Vehicle Route Optimization: An End-to-End Learning Approach with Multi-Objective Planning</a>
+                </h3>
+                <div class="publication-info">
+                  <span class="custom-tag">World Electric Vehicle Journal (Q2)</span>
+                  <span class="custom-tag">2026</span><br>
+                  <strong>Authors:</strong> R. Gutiérrez-Moreno, A. Llamazares, P. Revenga, M. Ocaña, M. Antunes-García <br>
+                </div>
+                <a href="https://doi.org/10.3390/wevj17010041" target="_blank" class="doi-link">
+                  <i class="fas fa-external-link-alt mr-1"></i> DOI: 10.3390/wevj17010041
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="media publication-card">
+            <figure class="media-left">
+              <p class="image">
+                <img src="./static/media/sensors2024hybrid/sensors2024hybrid.png" alt="Enhancing Autonomous Driving" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h3 class="title is-5 mb-2 publication-title">
+                  <a href="./sensors2024hybrid.html">Enhancing Autonomous Driving in Urban Scenarios: A Hybrid Approach with Reinforcement Learning and Classical Control</a>
+                </h3>
+                <div class="publication-info">
+                  <span class="custom-tag">Sensors (Q2)</span>
+                  <span class="custom-tag">2024</span><br>
+                  <strong>Authors:</strong> R. Gutiérrez-Moreno, R. Barea, E. López-Guillén, F. Arango, L. M. Bergasa<br>
+                </div>
+                <a href="https://doi.org/10.3390/s25010117" target="_blank" class="doi-link">
+                  <i class="fas fa-external-link-alt mr-1"></i> DOI: 10.3390/s25010117
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="media publication-card">
+            <figure class="media-left">
+              <p class="image">
+                <img src="./static/media/IV2024sim2real/IV2024sim2real.png" alt="Decision Making for Autonomous Driving" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h3 class="title is-5 mb-2 publication-title">
+                  <a href="./IV2024sim2real.html">Decision Making for Autonomous Driving Stack: Shortening the Gap from Simulation to Real-World Implementations</a>
+                </h3>
+                <div class="publication-info">
+                  <span class="custom-tag">35th IEEE Intelligent Vehicles Symposium</span>
+                  <span class="custom-tag">2024</span><br>
+                  <strong>Authors:</strong> R. Gutiérrez-Moreno, R. Barea, E. López-Guillén, F. Arango, P. Revenga, L. M. Bergasa<br>
+                </div>
+                <a href="https://doi.org/10.1109/IV55156.2024.10588560" target="_blank" class="doi-link">
+                  <i class="fas fa-external-link-alt mr-1"></i> DOI: 10.1109/IV55156.2024.10588560
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="media publication-card">
+            <figure class="media-left">
+              <p class="image">
+                <img src="./static/media/IV2023hybrid/IV2023hybrid.png" alt="Hybrid Decision Making" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h3 class="title is-5 mb-2 publication-title">
+                  <a href="./IV2023hybrid.html">Hybrid Decision Making for Autonomous Driving in Complex Urban Scenarios</a>
+                </h3>
+                <div class="publication-info">
+                  <span class="custom-tag">34th IEEE Intelligent Vehicles Symposium</span>
+                  <span class="custom-tag">2023</span><br>
+                  <strong>Authors:</strong> R. Gutiérrez-Moreno, R. Barea, E. López-Guillén, F. Arango, N. Abdeselam, L. M. Bergasa<br>
+                </div>
+                <a href="https://doi.org/10.1109/IV55152.2023.10186666" target="_blank" class="doi-link">
+                  <i class="fas fa-external-link-alt mr-1"></i> DOI: 10.1109/IV55152.2023.10186666
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="media publication-card">
+            <figure class="media-left">
+              <p class="image">
+                <img src="./static/media/ITSC2023augmented/ITSC2023augmented.png" alt="Augmented Reinforcement Learning" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h3 class="title is-5 mb-2 publication-title">
+                  <a href="./ITSC2023augmented.html">Augmented Reinforcement Learning with Efficient Social-Based Motion Prediction for Autonomous Decision-Making</a>
+                </h3>
+                <div class="publication-info">
+                  <span class="custom-tag">IEEE 26th ITSC</span>
+                  <span class="custom-tag">2023</span><br>
+                  <strong>Authors:</strong> R. Gutiérrez-Moreno, C. Gómez-Huelamo, R. Barea, E. López-Guillén, F. Arango, L. M. Bergasa<br>
+                </div>
+                <a href="https://doi.org/10.1109/ITSC57777.2023.10422277" target="_blank" class="doi-link">
+                  <i class="fas fa-external-link-alt mr-1"></i> DOI: 10.1109/ITSC57777.2023.10422277
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="media publication-card">
+            <figure class="media-left">
+              <p class="image">
+                <img src="./static/media/sensors2022reinforcement/sensors2022reinforcement.png" alt="Reinforcement Learning-Based Autonomous Driving" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h3 class="title is-5 mb-2 publication-title">
+                  <a href="./sensors2022reinforcement.html">Reinforcement Learning-Based Autonomous Driving at Intersections in CARLA Simulator</a>
+                </h3>
+                <div class="publication-info">
+                  <span class="custom-tag">Sensors (Q2)</span>
+                  <span class="custom-tag">2022</span><br>
+                  <strong>Authors:</strong> R. Gutiérrez-Moreno, R. Barea, E. López-Guillén, J. Araluce, L.M. Bergasa<br>
+                </div>
+                <a href="https://doi.org/10.3390/S22218373" target="_blank" class="doi-link">
+                  <i class="fas fa-external-link-alt mr-1"></i> DOI: 10.3390/S22218373
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="media publication-card">
+            <figure class="media-left">
+              <p class="image">
+                <img src="./static/media/IV2021validation/IV2021validation.png" alt="Validation method of a self-driving architecture" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h3 class="title is-5 mb-2 publication-title">
+                  <a href="./IV2021validation.html">Validation method of a self-driving architecture for unexpected pedestrian scenario in CARLA simulator</a>
+                </h3>
+                <div class="publication-info">
+                  <span class="custom-tag">32nd IEEE Intelligent Vehicles Symposium</span>
+                  <span class="custom-tag">2021</span><br>
+                  <strong>Authors:</strong> R. Gutiérrez-Moreno, J. F. Arango, C. Gómez-Huélamo, L. M. Bergasa, R. Barea, J. Araluce<br>
+                </div>
+                <a href="https://doi.org/10.1109/IV48863.2021.9575884" target="_blank" class="doi-link">
+                  <i class="fas fa-external-link-alt mr-1"></i> DOI: 10.1109/IV48863.2021.9575884
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="media publication-card">
+            <figure class="media-left">
+              <p class="image">
+                <img src="./static/media/sensors2020controller/sensors2020controller.png" alt="A waypoint tracking controller" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h3 class="title is-5 mb-2 publication-title">
+                  <a href="./sensors2020controller.html">A waypoint tracking controller for autonomous road vehicles using ROS framework</a>
+                </h3>
+                <div class="publication-info">
+                  <span class="custom-tag">Sensors (Q1)</span>
+                  <span class="custom-tag">2020</span><br>
+                  <strong>Authors:</strong> R. Gutiérrez-Moreno, E. López-Guillén, L.M. Bergasa, R. Barea, O. Pérez, C. Gómez-Huélamo, J.F. Arango, J. del Egido, J. López-Fernández<br>
+                </div>
+                <a href="https://doi.org/10.3390/S20144062" target="_blank" class="doi-link">
+                  <i class="fas fa-external-link-alt mr-1"></i> DOI: 10.3390/S20144062
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Verificar si el usuario ya tenía una preferencia guardada en su navegador
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+      body.classList.add('dark-mode');
+      themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    // Lógica para cambiar entre modo claro y oscuro al hacer clic
+    themeToggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      
+      // Cambiar el icono del sol/luna y guardar preferencia
+      if (body.classList.contains('dark-mode')) {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
 </html>

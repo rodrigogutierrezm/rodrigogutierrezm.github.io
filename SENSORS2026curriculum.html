@@ -2,42 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning"
-    />
-    <meta name="keywords" content="A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning" />
+    <meta name="description" content="A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning" />
+    <meta name="keywords" content="Curriculum Learning, Autonomous Driving, Deep Reinforcement Learning, Sim2Real, CARLA, SUMO" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning</title>
+    <title>Curriculum Approach to Bridge the Reality Gap | Rodrigo Gutiérrez-Moreno</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-E1Z15EF2FG"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1Z15EF2FG"></script>
     <script>
       window.dataLayer = window.dataLayer || []
       function gtag() {
         dataLayer.push(arguments)
       }
       gtag('js', new Date())
-
       gtag('config', 'G-E1Z15EF2FG')
     </script>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="./static/css/bulma.min.css" />
     <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
     <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
     <link rel="stylesheet" href="./static/css/index.css" />
     <link rel="icon" href="./static/images/favicon.png" />
 
@@ -46,16 +32,44 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .experiment-img {
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        border: 1px solid #eaeaea;
+        margin: 0 auto 1.5rem auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      .experiment-block {
+        margin-bottom: 4rem;
+      }
+      .section-divider {
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-bottom: 30px !important;
+      }
+      .abstract-box {
+        background-color: #fafafa;
+        border: 1px solid #eaeaea;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: none;
+      }
+      .author-block {
+        margin-right: 10px;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-        >
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -64,62 +78,21 @@
       <div class="navbar-menu">
         <div class="navbar-start" style="flex-grow: 1; justify-content: center">
           <a class="navbar-item" href="./index.html">
-            <span class="icon">
-              <i class="fas fa-home"></i>
-            </span>
+            <span class="icon"><i class="fas fa-home"></i></span>
           </a>
 
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link"> More Research </a>
             <div class="navbar-dropdown">
-              <a
-                class="navbar-item"
-                href="./SENSORS2026curriculum.html"
-              >
-                Curricular Reinforcement Learning
-              </a>
-              <a
-                class="navbar-item"
-                href="./sensors2024hybrid.html"
-              >
-                Hybrid Decision Making
-              </a>
-              <a
-                class="navbar-item"
-                href="./IV2024sim2real.html"
-              >
-                Simulation to Real
-              </a>
-              <a
-                class="navbar-item"
-                href="./ITSC2023augmented.html"
-              >
-                Augmented Reinforcement Learning
-              </a>
-              <a
-                class="navbar-item"
-                href="./IV2023hybrid.html"
-              >
-                Urban Scenarios
-              </a>
-              <a
-                class="navbar-item"
-                href="./sensors2022reinforcement.html"
-              >
-                Intersections
-              </a>
-              <a
-                class="navbar-item"
-                href="./IV2021validation.html"
-              >
-                Validation
-              </a>
-              <a
-                class="navbar-item"
-                href="./sensors2020controller.html"
-              >
-                Tracking Controller
-              </a>
+              <a class="navbar-item" href="./wevj2026electric.html">Electric Vehicle Route Optimization</a>
+              <a class="navbar-item" href="./SENSORS2026curriculum.html">Curricular Reinforcement Learning</a>
+              <a class="navbar-item" href="./sensors2024hybrid.html">Hybrid Decision Making</a>
+              <a class="navbar-item" href="./IV2024sim2real.html">Simulation to Real</a>
+              <a class="navbar-item" href="./ITSC2023augmented.html">Augmented Reinforcement Learning</a>
+              <a class="navbar-item" href="./IV2023hybrid.html">Urban Scenarios</a>
+              <a class="navbar-item" href="./sensors2022reinforcement.html">Intersections</a>
+              <a class="navbar-item" href="./IV2021validation.html">Validation</a>
+              <a class="navbar-item" href="./sensors2020controller.html">Tracking Controller</a>
             </div>
           </div>
         </div>
@@ -127,84 +100,45 @@
     </nav>
 
     <section class="hero">
-      <div class="hero-body">
+      <div class="hero-body pt-6 pb-4">
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">
+              
+              <span class="tag is-info is-light is-medium mb-4">
+                <span class="icon"><i class="fas fa-hourglass-half"></i></span>
+                <span>In Submission for Sensors 2026</span>
+              </span>
+
+              <h1 class="title is-2 publication-title mb-5">
                 A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning
               </h1>
-              <div class="is-size-5 publication-authors">
+              
+              <div class="is-size-5 publication-authors mb-3">
                 <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Rodrigo-Gutierrez-Moreno/">Rodrigo Gutiérrez-Moreno</a
-                  ><sup>1</sup>,</span
-                >
-                <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Rafael-Barea-Navarro/">Rafael Barea</a
-                  ><sup>1</sup>,</span
-                >
-                <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Maria-Elena-Lopez-Guillen/">Elena López-Guillén</a
-                  ><sup>1</sup>,
+                  <a href="https://www.uah.es/es/estudios/profesor/Rodrigo-Gutierrez-Moreno/">Rodrigo Gutiérrez-Moreno</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://portalcientifico.uah.es/investigadores/155277/detalle">Felipe Arango</a
-                  ><sup>1</sup>,
+                  <a href="https://www.uah.es/es/estudios/profesor/Rafael-Barea-Navarro/">Rafael Barea</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Fabio-Sanchez-Garcia/">Fabio Sáchez-García</a
-                  ><sup>1</sup>,</span
-                >
+                  <a href="https://www.uah.es/es/estudios/profesor/Maria-Elena-Lopez-Guillen/">Elena López-Guillén</a><sup>1</sup>,
+                </span>
                 <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Luis-Miguel-Bergasa-Pascual/">Luis M. Bergasa</a
-                  ><sup>1</sup>
+                  <a href="https://portalcientifico.uah.es/investigadores/155277/detalle">Felipe Arango</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.uah.es/es/estudios/profesor/Fabio-Sanchez-Garcia/">Fabio Sánchez-García</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.uah.es/es/estudios/profesor/Luis-Miguel-Bergasa-Pascual/">Luis M. Bergasa</a><sup>1</sup>
                 </span>
               </div>
 
-              <div class="is-size-5 publication-authors">
-                <span class="author-block"
-                  ><sup>1</sup>Universidad de Alcalá</span>
+              <div class="is-size-6 publication-authors has-text-grey mb-5">
+                <span class="author-block"><sup>1</sup>Universidad de Alcalá</span>
               </div>
 
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <!-- PDF Link. -->
-                  <span class="link-block">
-                    <a
-                      href="./static/articles/SENSORS2026curriculum.pdf"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a
-                      href="https://es.overleaf.com/project/660fc10dadb0ce8cfc6176bc"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
-                  <!-- Code Link. -->
-                  <span class="link-block">
-                    <a
-                      href="https://github.com/rodrigogutierrezm/rodrigogutierrezm.github.io"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -213,293 +147,172 @@
 
     <section class="hero teaser">
       <div class="container is-max-desktop">
-        <div class="hero-body">
-          <img
-          src="./static/media/SENSORS2026curriculum/SENSORS2026curriculum.png"
-          />
+        <div class="hero-body has-text-centered">
+          <img src="./static/media/SENSORS2026curriculum/SENSORS2026curriculum.png" class="experiment-img" alt="Curriculum Approach Architecture" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section pt-0">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="box abstract-box content has-text-justified">
+              <p>
+                Decision-Making is a fundamental topic in the domain of Autonomous Driving where significant challenges must be tackled due to the variable behaviours of surrounding agents and the wide array of encountered scenarios. The primary aim of this work is to develop a hybrid Decision-Making architecture able to be validated on a real vehicle that marries the reliability of classical techniques with the adaptability of Deep Reinforcement Learning approaches. To address the crucial transition from simulated training environments to real-world applications, this research employs a Curriculum Learning approach, facilitated by the deployment of Digital Twins and Parallel Intelligence technologies, significantly narrowing the Reality Gap and enhancing the applicability of learned behaviours. The viability of this approach is evidenced through a Parallel Execution, wherein simulated and real-world tests are conducted simultaneously. Specifically, our approach consistently surpasses the performance benchmarks set by existing frameworks in the literature within SMARTS, achieving success rates over 91%. Additionally, it completes various scenarios in CARLA up to 50% faster than the Autopilot, demonstrating improved comfort and safety.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container is-max-desktop">
-        <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
-              <p>
-                Decision-Making is a fundamental topic in the domain of Autonomous Driving where significant challenges must be tackled due to the variable behaviours of surrounding agents and the wide array of encountered scenarios. The primary aim of this work is to develop a hybrid Decision-Making architecture able to be validated on a real vehicle that marries the reliability of classical techniques with the adaptability of Deep Reinforcement Learning approaches. To address the crucial transition from simulated training environments to real-world applications, this research employs a Curriculum Learning approach, facilitated by the deployment of Digital Twins and Parallel Intelligence technologies, significantly narrowing the Reality Gap and enhancing the applicability of learned behaviours. The viability of this approach is evidenced through a Parallel Execution, wherein simulated and real-world tests are conducted simultaneously. Specifically, our approach consistently surpasses the performance benchmarks set by existing frameworks in the literature within SMARTS, achieving success rates over 91\%. Additionally, it completes various scenarios in CARLA up to 50\% faster than the Autopilot, demonstrating improved comfort and safety.
-              </p>
+            <h2 class="title is-3 section-divider">Experiments in SUMO</h2>
+            <p class="subtitle is-5 has-text-grey mb-6">Lightweight simulation for high-level behaviours learning.</p>
+               
+            <div class="experiment-block">
+              <h3 class="title is-4">Unprotected Left Turn Scenario</h3>
+              <p class="subtitle is-6 mb-3">The green agent must merge into the left lane.</p>
+              <img src="./static/media/SENSORS2026curriculum/cross.gif" class="experiment-img" alt="Left Turn SUMO" />
+            </div>
+
+            <div class="experiment-block">
+              <h3 class="title is-4">Three Lane Merge Scenario</h3>
+              <p class="subtitle is-6 mb-3">The green agent must merge into the traffic.</p>
+              <img src="./static/media/SENSORS2026curriculum/merge.gif" class="experiment-img" alt="Merge SUMO" />
+            </div>
+
+            <div class="experiment-block">
+              <h3 class="title is-4">Three Lane Road Scenario</h3>
+              <p class="subtitle is-6 mb-3">The green agent must reach the end of the road.</p>
+              <img src="./static/media/SENSORS2026curriculum/lane_change.gif" class="experiment-img" alt="Lane Change SUMO" />
+            </div>
+
+            <div class="experiment-block">
+              <h3 class="title is-4">Roundabout Scenario</h3>
+              <p class="subtitle is-6 mb-3">The green agent must merge into the roundabout and leave it in the last exit.</p>
+              <img src="./static/media/SENSORS2026curriculum/roundabout.gif" class="experiment-img" alt="Roundabout SUMO" />
+            </div>
+
+            <div class="experiment-block">
+              <h3 class="title is-4">SUMO Quantitative Results</h3>
+              <p class="subtitle is-6 mb-3">The results in terms of success rate (%) and average completion time (sec). An ablation study between different DRL agents and a comparison to representative SOTA proposals are presented. The training progression of the rewards is also represented.</p>
+              <img src="./static/media/SENSORS2026curriculum/sumoresults.png" class="experiment-img" alt="SUMO Results" />
             </div>
           </div>
         </div>
-        <!--/ Abstract. -->
+      </div>
+    </section>
 
-<!-- SUMO. -->
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <h2 class="title is-3" style="margin-top: 70px;">Experiments in SUMO</h2>
-    <p class="subtitle is-5" style="margin-top: 10px;">Lightweigh simulation for higl-level behaviours learning.</p>
-       
-    <h3 class="title is-4" style="margin-top: 30px;">Unprotected Left Turn Scenario</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The green agent must merge into the left lane.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/cross.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
+    <section class="section has-background-light" style="border-top: 1px solid #eaeaea; border-bottom: 1px solid #eaeaea;">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 section-divider">Experiments in CARLA</h2>
+            <p class="subtitle is-5 has-text-grey mb-6">Realistic simulation including vehicle dynamics.</p>
+               
+            <div class="experiment-block">
+              <h3 class="title is-4">Town 03 Crossroad Scenario</h3>
+              <p class="subtitle is-6 mb-3">The ego vehicle must cross the intersection while vehicles are coming from both sides.</p>
+              <img src="./static/media/SENSORS2026curriculum/carlacross.gif" class="experiment-img" alt="Crossroad CARLA" />
+              <p class="subtitle is-6 mt-4 mb-3">The ego vehicle stops due to the adversarial vehicles and starts moving when it identifies a gap. The control signals and comfort metrics are represented below.</p>
+              <img src="./static/media/SENSORS2026curriculum/crossroadmid_control-1.png" class="experiment-img" alt="Crossroad Control" />
+            </div>
 
-    <h3 class="title is-4" style="margin-top: 30px;">Three Lane Merge Scenario</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The green agent must merge into the traffic.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/merge.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
+            <div class="experiment-block">
+              <h3 class="title is-4">Town 03 Merge Scenario</h3>
+              <p class="subtitle is-6 mb-3">The ego vehicle must merge into the right lane while vehicles are coming from the left side.</p>
+              <img src="./static/media/SENSORS2026curriculum/carlamerge.gif" class="experiment-img" alt="Merge CARLA" />
+              <p class="subtitle is-6 mt-4 mb-3">The ego vehicle stops due to the adversarial vehicles and starts moving when it identifies a gap. The control signals and comfort metrics are represented below.</p>
+              <img src="./static/media/SENSORS2026curriculum/mergemid_control-1.png" class="experiment-img" alt="Merge Control" />
+            </div>
 
-    <h3 class="title is-4" style="margin-top: 30px;">Three Lane Road Scenario</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The green agent must reach the end of the road.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/lane_change.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
+            <div class="experiment-block">
+              <h3 class="title is-4">Town 04 Lane Change Scenario</h3>
+              <p class="subtitle is-6 mb-3">The ego vehicle must drive until the end of the road while vehicles are driving in this road.</p>
+              <img src="./static/media/SENSORS2026curriculum/carlalanechange.gif" class="experiment-img" alt="Lane Change CARLA" />
+              <p class="subtitle is-6 mt-4 mb-3">The ego vehicle changes lane two times resulting in the shown control signals.</p>
+              <img src="./static/media/SENSORS2026curriculum/highway_control-1.png" class="experiment-img" alt="Lane Change Control" />
+            </div>
 
-    <h3 class="title is-4" style="margin-top: 30px;">Roundabout Scenario</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The green agent must merge into the roundabout and leave it in the last exit.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/roundabout.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
+            <div class="experiment-block">
+              <h3 class="title is-4">Town 03 Roundabout Scenario</h3>
+              <p class="subtitle is-6 mb-3">The ego vehicle must merge into the roundabout and leave it in the second exit.</p>
+              <img src="./static/media/SENSORS2026curriculum/carlaroundabout.gif" class="experiment-img" alt="Roundabout CARLA" />
+              <p class="subtitle is-6 mt-4 mb-3">The control signals are represented for the vehicle approaching and merging into the roundabout.</p>
+              <img src="./static/media/SENSORS2026curriculum/roundaboutmid_control-1.png" class="experiment-img" alt="Roundabout Control" />
+            </div>
 
-    <h3 class="title is-4" style="margin-top: 30px;">SUMO Quantitative Results</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The results in terms of success rate (%) and average completion time (sec). An ablation study between different DRL agents and a comparison to representative SOTA proposals are presented. The training pregression of the rewards is also represented. </p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/sumoresults.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
+            <div class="experiment-block">
+              <h3 class="title is-4">Town 03 Concatenated Scenario</h3>
+              <p class="subtitle is-6 mb-3">The ego vehicle drives through all the previously introduced scenarios in a concatenated way.</p>
+              <img src="./static/media/SENSORS2026curriculum/concat.gif" class="experiment-img" alt="Concatenated CARLA" />
+              <p class="subtitle is-6 mt-4 mb-3">The first chart shows the ego vehicle performance while the second one presents the CARLA Autopilot signals under the same scenario.</p>
+              <img src="./static/media/SENSORS2026curriculum/town03_control-1.png" class="experiment-img mb-3" alt="Concatenated Control 1" />
+              <img src="./static/media/SENSORS2026curriculum/town03ap_control-1.png" class="experiment-img" alt="Concatenated Control 2" />
+            </div>
 
-  </div>
-</div>
+            <div class="experiment-block">
+              <h3 class="title is-4">CARLA Quantitative Results</h3>
+              <p class="subtitle is-6 mb-3">The comparison using different metrics between our proposal and the CARLA Autopilot.</p>
+              <img src="./static/media/SENSORS2026curriculum/carlaresults.png" class="experiment-img" alt="CARLA Results" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- CARLA -->
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <h2 class="title is-3" style="margin-top: 70px;">Experiments in CARLA</h2>
-    
-    <p class="subtitle is-5">Realistic simulation including vehicle dynamics</p>
-       
-    <h3 class="title is-4" style="margin-top: 30px;">Town 03 Crossroad Scenario</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle must cross the intersection while vehicles are coming from both sides.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/carlacross.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3 section-divider">Parallel Execution Experiments</h2>
+            <p class="subtitle is-5 has-text-grey mb-6">Validation of our proposal with a Parallel Execution in a merge scenario in our University Campus using our Real Vehicle.</p>
 
-    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle stops due to the adversarial vehicles and starts moving when it identifies a gap. The control signals and comfor metrics are represented bellow.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/crossroadmid_control-1.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
+            <div class="experiment-block">
+              <h3 class="title is-4">Low Traffic Flow</h3>
+              <p class="subtitle is-6 mb-2"><strong>Front View</strong></p>
+              <img src="./static/media/SENSORS2026curriculum/low_front_pe.gif" class="experiment-img" alt="Low Traffic Front View" />
+              
+              <p class="subtitle is-6 mt-4 mb-2"><strong>Side View</strong></p>
+              <img src="./static/media/SENSORS2026curriculum/low_side_pe.gif" class="experiment-img" alt="Low Traffic Side View" />
+              
+              <p class="subtitle is-6 mt-4 mb-2"><strong>Control Graphics</strong></p>
+              <img src="./static/media/SENSORS2026curriculum/control_np-1.png" class="experiment-img" alt="Low Traffic Control" />
+            </div>
 
-    <h3 class="title is-4" style="margin-top: 30px;">Town 03 Merge Scenario</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle must merge into the right lane while vehicles are coming from left side.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/carlamerge.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle stops due to the adversarial vehicles and starts moving when it identifies a gap. The control signals and comfor metrics are represented bellow.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/mergemid_control-1.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-    <h3 class="title is-4" style="margin-top: 30px;">Town 04 Lane Change Scenario</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle must drive until the end of the road while vehicles are driving in this road.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/carlalanechange.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-    
-    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle changes lane two times resulting in the shown control signals.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/highway_control-1.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-    <h3 class="title is-4" style="margin-top: 30px;">Town 03 Roundabout Scenario</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle must merge into the roundabout and leave it in the second exit.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/carlaroundabout.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-    <p class="subtitle is-5" style="margin-top: 10px;">The control signals are repreente of the vehicle approaching and mergin the roundabout.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/roundaboutmid_control-1.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-    <h3 class="title is-4" style="margin-top: 30px;">Town 03 Concatenated Scenario</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The ego vehicle drives through all the previously introduced scenarios in a concatenated way.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/concat.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-    <p class="subtitle is-5" style="margin-top: 10px;">The fisrt charts shows the ego vehicle performance while the second one presentd the CARLA Autopilor signals under the same scenario.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/town03_control-1.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/town03ap_control-1.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-    <h3 class="title is-4" style="margin-top: 30px;">CARLA Quantitative Results</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">The comparison using different metrics betwenn our proposal and the CARLA Autopilot.</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/carlaresults.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-  </div>
-</div>
-
-<!-- PE -->
-<div class="columns is-centered has-text-centered">
-  <div class="column is-four-fifths">
-    <h2 class="title is-3" style="margin-top: 70px;">Parallel Execution Experiments</h2>
-    
-    <p class="subtitle is-5">Validation of our proposal with a Parallel Execution in a merge scenario in our University Campus using our Real Vehicle.</p>
-
-    <h3 class="title is-4" style="margin-top: 30px;">Low Traffic Flow</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">Front View</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/low_front_pe.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-    <p class="subtitle is-5" style="margin-top: 10px;">Side View</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/low_side_pe.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-    <p class="subtitle is-5" style="margin-top: 10px;">Control Graphics</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/control_np-1.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-    <h3 class="title is-4" style="margin-top: 30px;">Mixed Traffic Flow</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">Front View</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/mixed_front_pe.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-    <p class="subtitle is-5" style="margin-top: 10px;">Side View</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/mixed_side_pe.gif"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-    <p class="subtitle is-5" style="margin-top: 10px;">Control Graphics</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/control_pc-1.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div>
-
-    <!-- <h3 class="title is-4" style="margin-top: 30px;">High Traffic Flow</h3>
-    <p class="subtitle is-5" style="margin-top: 10px;">Control Graphics</p>
-    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: left;">
-      <img
-        src="./static/media/SENSORS2026curriculum/control_p-1.png"
-        class="image"
-        style="max-width: 100%; height: auto;"
-      />
-    </div> -->
-
-  </div>
-</div>
-
+            <div class="experiment-block">
+              <h3 class="title is-4">Mixed Traffic Flow</h3>
+              <p class="subtitle is-6 mb-2"><strong>Front View</strong></p>
+              <img src="./static/media/SENSORS2026curriculum/mixed_front_pe.gif" class="experiment-img" alt="Mixed Traffic Front View" />
+              
+              <p class="subtitle is-6 mt-4 mb-2"><strong>Side View</strong></p>
+              <img src="./static/media/SENSORS2026curriculum/mixed_side_pe.gif" class="experiment-img" alt="Mixed Traffic Side View" />
+              
+              <p class="subtitle is-6 mt-4 mb-2"><strong>Control Graphics</strong></p>
+              <img src="./static/media/SENSORS2026curriculum/control_pc-1.png" class="experiment-img" alt="Mixed Traffic Control" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>@article{gutierrez2024curricular,
+        <h2 class="title is-4">BibTeX</h2>
+        <div class="box">
+          <pre style="background-color: transparent; padding: 0;"><code>@article{gutierrez2024curricular,
   author    = {Gutiérrez-Moreno, Rodrigo and Barea, Rafael and López-Guillén, Elena and Arango, Felipe and Sánchez-García, Fabio and Bergasa, Luis Miguel},
   title     = {A Curriculum Approach to Bridge the Reality Gap in Autonomous Driving Decision-Making based on Deep Reinforcement Learning},
   journal   = {Sensors},
   year      = {2026},
 }</code></pre>
+        </div>
       </div>
     </section>
 

@@ -2,42 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="Hybrid Decision Making for Autonomous Driving in Complex Urban Scenarios"
-    />
-    <meta name="keywords" content="Hybrid Decision Making for Autonomous Driving in Complex Urban Scenarios" />
+    <meta name="description" content="Hybrid Decision Making for Autonomous Driving in Complex Urban Scenarios" />
+    <meta name="keywords" content="Autonomous Driving, Hybrid Decision Making, Reinforcement Learning, PPO, Urban Scenarios" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hybrid Decision Making for Autonomous Driving in Complex Urban Scenarios</title>
+    <title>Hybrid Decision Making for Autonomous Driving | Rodrigo Gutiérrez-Moreno</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-E1Z15EF2FG"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E1Z15EF2FG"></script>
     <script>
       window.dataLayer = window.dataLayer || []
       function gtag() {
         dataLayer.push(arguments)
       }
       gtag('js', new Date())
-
       gtag('config', 'G-E1Z15EF2FG')
     </script>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="./static/css/bulma.min.css" />
     <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
     <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
     <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
     <link rel="stylesheet" href="./static/css/index.css" />
     <link rel="icon" href="./static/images/favicon.png" />
 
@@ -46,16 +32,36 @@
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .experiment-img {
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        border: 1px solid #eaeaea;
+        margin: 0 auto 1.5rem auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      .abstract-box {
+        background-color: #fafafa;
+        border: 1px solid #eaeaea;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: none;
+      }
+      .author-block {
+        margin-right: 10px;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a
-          role="button"
-          class="navbar-burger"
-          aria-label="menu"
-          aria-expanded="false"
-        >
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -64,62 +70,21 @@
       <div class="navbar-menu">
         <div class="navbar-start" style="flex-grow: 1; justify-content: center">
           <a class="navbar-item" href="./index.html">
-            <span class="icon">
-              <i class="fas fa-home"></i>
-            </span>
+            <span class="icon"><i class="fas fa-home"></i></span>
           </a>
 
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link"> More Research </a>
             <div class="navbar-dropdown">
-              <a
-                class="navbar-item"
-                href="./SENSORS2026curriculum.html"
-              >
-                Curricular Reinforcement Learning
-              </a>
-              <a
-                class="navbar-item"
-                href="./sensors2024hybrid.html"
-              >
-                Hybrid Decision Making
-              </a>
-              <a
-                class="navbar-item"
-                href="./IV2024sim2real.html"
-              >
-                Simulation to Real
-              </a>
-              <a
-                class="navbar-item"
-                href="./ITSC2023augmented.html"
-              >
-                Augmented Reinforcement Learning
-              </a>
-              <a
-                class="navbar-item"
-                href="./IV2023hybrid.html"
-              >
-                Urban Scenarios
-              </a>
-              <a
-                class="navbar-item"
-                href="./sensors2022reinforcement.html"
-              >
-                Intersections
-              </a>
-              <a
-                class="navbar-item"
-                href="./IV2021validation.html"
-              >
-                Validation
-              </a>
-              <a
-                class="navbar-item"
-                href="./sensors2020controller.html"
-              >
-                Tracking Controller
-              </a>
+              <a class="navbar-item" href="./wevj2026electric.html">Electric Vehicle Route Optimization</a>
+              <a class="navbar-item" href="./SENSORS2026curriculum.html">Curricular Reinforcement Learning</a>
+              <a class="navbar-item" href="./sensors2024hybrid.html">Hybrid Decision Making</a>
+              <a class="navbar-item" href="./IV2024sim2real.html">Simulation to Real</a>
+              <a class="navbar-item" href="./ITSC2023augmented.html">Augmented Reinforcement Learning</a>
+              <a class="navbar-item" href="./IV2023hybrid.html">Urban Scenarios</a>
+              <a class="navbar-item" href="./sensors2022reinforcement.html">Intersections</a>
+              <a class="navbar-item" href="./IV2021validation.html">Validation</a>
+              <a class="navbar-item" href="./sensors2020controller.html">Tracking Controller</a>
             </div>
           </div>
         </div>
@@ -127,84 +92,40 @@
     </nav>
 
     <section class="hero">
-      <div class="hero-body">
+      <div class="hero-body pt-6 pb-4">
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">
+              
+              <h1 class="title is-2 publication-title mb-5">
                 Hybrid Decision Making for Autonomous Driving in Complex Urban Scenarios
               </h1>
-              <div class="is-size-5 publication-authors">
+              
+              <div class="is-size-5 publication-authors mb-3">
                 <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Rodrigo-Gutierrez-Moreno/">Rodrigo Gutiérrez-Moreno</a
-                  ><sup>1</sup>,</span
-                >
-                <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Rafael-Barea-Navarro/">Rafael Barea</a
-                  ><sup>1</sup>,</span
-                >
-                <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Maria-Elena-Lopez-Guillen/">Elena López-Guillén</a
-                  ><sup>1</sup>,
+                  <a href="https://www.uah.es/es/estudios/profesor/Rodrigo-Gutierrez-Moreno/">Rodrigo Gutiérrez-Moreno</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://portalcientifico.uah.es/investigadores/155277/detalle">Felipe Arango</a
-                  ><sup>1</sup>,
+                  <a href="https://www.uah.es/es/estudios/profesor/Rafael-Barea-Navarro/">Rafael Barea</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  Navil Abdeselam</a
-                  ><sup>1</sup>,
+                  <a href="https://www.uah.es/es/estudios/profesor/Maria-Elena-Lopez-Guillen/">Elena López-Guillén</a><sup>1</sup>,
                 </span>
                 <span class="author-block">
-                  <a href="https://www.uah.es/es/estudios/profesor/Luis-Miguel-Bergasa-Pascual/">Luis M. Bergasa</a
-                  ><sup>1</sup>
+                  <a href="https://portalcientifico.uah.es/investigadores/155277/detalle">Felipe Arango</a><sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  Navil Abdeselam<sup>1</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.uah.es/es/estudios/profesor/Luis-Miguel-Bergasa-Pascual/">Luis M. Bergasa</a><sup>1</sup>
                 </span>
               </div>
 
-              <div class="is-size-5 publication-authors">
-                <span class="author-block"
-                  ><sup>1</sup>Universidad de Alcalá</span>
+              <div class="is-size-6 publication-authors has-text-grey mb-5">
+                <span class="author-block"><sup>1</sup>Universidad de Alcalá</span>
               </div>
 
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <!-- PDF Link. -->
-                  <span class="link-block">
-                    <a
-                      href="./static/articles/IV2023hybrid.pdf"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a
-                      href="https://ieeexplore.ieee.org/document/10186666"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="ai ai-arxiv"></i>
-                      </span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
-                  <!-- Code Link. -->
-                  <span class="link-block">
-                    <a
-                      href="https://github.com/rodrigogutierrezm/rodrigogutierrezm.github.io"
-                      class="external-link button is-normal is-rounded is-dark"
-                    >
-                      <span class="icon">
-                        <i class="fab fa-github"></i>
-                      </span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -213,39 +134,40 @@
 
     <section class="hero teaser">
       <div class="container is-max-desktop">
-        <div class="hero-body">
-          <img
-          src="./static/media/IV2023hybrid/IV2023hybrid.png"
-          />
+        <div class="hero-body has-text-centered">
+          <img src="./static/media/IV2023hybrid/IV2023hybrid.png" class="experiment-img" alt="Hybrid Decision Making Diagram" />
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section pt-0">
       <div class="container is-max-desktop">
-        <!-- Abstract. -->
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified">
+            <div class="box abstract-box content has-text-justified">
               <p>
                 Autonomous driving presents significant challenges due to the variability of behaviours exhibited by surrounding vehicles and the diversity of scenarios encountered. To address these challenges, we propose a hybrid architecture that combines traditional and deep learning techniques. Our architecture includes strategy, tactical and execution modules. Specifically, the strategy module defines the trajectory to be followed. Then, the tactical decision module employs a proximal policy optimization algorithm and deep reinforcement learning. Finally, the maneuver execution module uses a linear-quadratic regulator controller for trajectory tracking and a predictive model controller for lane change execution. This hybrid architecture and the comparison with other classical approaches are the main contributions of this research. Experimental results demonstrate that the proposed framework solves concatenated complex urban scenarios optimally.
               </p>
             </div>
           </div>
         </div>
-        <!--/ Abstract. -->
+      </div>
+    </section>
 
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>@article{gutierrez2023hybrid,
+        <h2 class="title is-4">BibTeX</h2>
+        <div class="box">
+          <pre style="background-color: transparent; padding: 0;"><code>@article{gutierrez2023hybrid,
   author    = {Gutiérrez-Moreno, Rodrigo and Barea, Rafael and López-Guillén, Elena and Arango, Felipe and Abdeselam, Navil and Bergasa, Luis Miguel},
   title     = {Hybrid Decision Making for Autonomous Driving in Complex Urban Scenarios},
   journal   = {34th IEEE Intelligent Vehicles Symposium (IV)},
   year      = {2023},
 }</code></pre>
+        </div>
       </div>
     </section>
+
   </body>
 </html>
